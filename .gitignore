@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Logs ###
+*.log
+/kafka/kafka-model/src/main/java/com/ysuturin/microservices/demo/kafka/avro/model/TwitterAvroModel.java
