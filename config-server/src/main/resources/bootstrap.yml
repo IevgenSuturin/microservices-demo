@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+#          uri: file:/media/ysuturin/myfiles/workspace/gitrepo/microservices-demo/config-server-repository
+          uri: https://github.com/IevgenSuturin/microservices-demo-spring-cloud-config-server-repo.git
+          username: IevgenSuturin
+          password: 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
+          default-label: master
+          clone-on-start: true
+    fail-fast: true
+  security:
+    user:
+      name: spring_cloud_user
+      password: springCloud_Pwd!
