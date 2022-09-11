@@ -8,11 +8,11 @@ spring:
 #          uri: file:/media/ysuturin/myfiles/workspace/gitrepo/microservices-demo/config-server-repository
           uri: https://github.com/IevgenSuturin/microservices-demo-spring-cloud-config-server-repo.git
           username: IevgenSuturin
-          password: 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
+          password: '{cipher}1ebc21c5b0919cf38c76354ef134c2a738ac8e05236768061aa0aded413731a186d7b1c439210f57eb609d33d065dc96fbaca2bb2a376bc960d428d89f599f86'
           default-label: master
           clone-on-start: true
     fail-fast: true
   security:
     user:
       name: spring_cloud_user
-      password: springCloud_Pwd!
+      password: '{cipher}2884088c2647ae9a9806688b9d161e34c8ebaf54c5ddeef3e68056acebc649cd9fb2f3bdb38a9f106fd3c123d2d57ee3'
