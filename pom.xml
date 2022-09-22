@@ -9,7 +9,11 @@
 		<module>twitter-to-kafka-service</module>
         <module>config-server</module>
         <module>kafka-to-elastic-service</module>
-    </modules>
+        <module>elastic</module>
+		<module>elastic/elastic-model</module>
+		<module>elastic/elastic-config</module>
+		<module>elastic/elastic-index-client</module>
+	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -38,6 +42,7 @@
 		<aspectjrt.version>1.9.9.1</aspectjrt.version>
 		<spring-cloud.version>3.1.4</spring-cloud.version>
 		<spring-cloud-dependependencies.version>2021.0.4</spring-cloud-dependependencies.version>
+		<elasticsearch.version>7.17.6</elasticsearch.version>
 	</properties>
 
 	<repositories>
@@ -80,6 +85,11 @@
 				<artifactId>kafka-consumer</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.ysuturin.microservices.demo</groupId>
+				<artifactId>elastic-model</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
@@ -89,6 +99,11 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-webflux</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
 				<version>${spring-boot.version}</version>
 			</dependency>
 			<dependency>
@@ -142,6 +157,16 @@
 				<version>${spring-boot.version}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>org.elasticsearch</groupId>
+				<artifactId>elasticsearch</artifactId>
+				<version>${elasticsearch.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.elasticsearch.client</groupId>
+				<artifactId>elasticsearch-rest-high-level-client</artifactId>
+				<version>${elasticsearch.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.twitter4j</groupId>
 				<artifactId>twitter4j-stream</artifactId>
